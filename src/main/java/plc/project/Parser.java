@@ -280,7 +280,7 @@ public final class Parser {
      */
     public Ast.Expression parseLogicalExpression() throws ParseException {
         Ast.Expression left = parseEqualityExpression();
-        while (peek("&&") || peek("||") || peek("AND") || peek("OR")) {
+        while (peek("AND") || peek("OR")) {
             String operator = tokens.get(0).getLiteral();
             tokens.advance();
             Ast.Expression right = parseEqualityExpression();

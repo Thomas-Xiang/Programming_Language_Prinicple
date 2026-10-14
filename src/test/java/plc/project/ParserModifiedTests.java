@@ -356,10 +356,10 @@ final class ParserModifiedTests {
                         Arrays.asList(
                                 //expr1 && expr2
                                 new Token(Token.Type.IDENTIFIER, "expr1", 0),
-                                new Token(Token.Type.OPERATOR, "&&", 6),
+                                new Token(Token.Type.OPERATOR, "AND", 6),
                                 new Token(Token.Type.IDENTIFIER, "expr2", 10)
                         ),
-                        new Ast.Expression.Binary("&&",
+                        new Ast.Expression.Binary("AND",
                                 new Ast.Expression.Access(Optional.empty(), "expr1"),
                                 new Ast.Expression.Access(Optional.empty(), "expr2")
                         )
